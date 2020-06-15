@@ -1,0 +1,12 @@
+#device {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#device:after {
+  content: 'A';
+  font: 80px serif;
+  display: block;
+  text-align: center;
+}
