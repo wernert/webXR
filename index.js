@@ -6,7 +6,12 @@
 let wakeLock = null;
 
 // Function that attempts to request a wake lock.
-wlog = (txt) => { document.getElementById("lockstat").value = txt;};
+wlog = (txt) => { document.getElementById("lockstat")
+  .innerHTML += txt;
+};
+
+if ('wakeLock' in navigator){wlog('WakeLock  supported');}
+else {wlog('WakeLock not supported');}
 
 const requestWakeLock = async () => {
   try {

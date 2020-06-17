@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #device {
+      margin: 10px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+    #device:after {
+      content: 'A';
+      font: 80px serif;
+      display: block;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>display</h2>
+  <a href="canvas.html">canvas setup</a>
+
+  <h2>wake lock</h2>
+  <a href="wakelock.html">wakelock page</a>
+
+  <button onclick="requestWakeLock()">requestWakeLock</button>
+  <button onclick="releaseWakeLock()">releaseWakeLock</button>
+  <input id="lockstat" type="text" value="">
+
+  <hr>
+  <h2>orientation lock</h2>
+  <div id="device"></div>
+  <p>Current screen orientation is <b id="orientationType">unknown</b>.</p>
+  <p>
+    <button id="lock" onclick="lock()">Lock in current orientation</button>
+    <button id="unlock" onclick="unlock()">Release the lock</button>
+    
+    <button id="fullscreen">fullscreen</button>
+  </p>
+  <p id="logTarget"></p>
+
+  <a href="https://whatwebcando.today/screen-orientation.html">screen</a>
+  <script src="index.js"></script>
+</body>
+
+</html>

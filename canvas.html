@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas size</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="bower_components/drag-resize/drag-resize.html">
+
+  <style>
+    #screendim {
+      width: 400px;
+      height: 300px;
+      background-color: black;
+      color: honeydew;
+
+    }
+  </style>
+</head>
+<body>
+  
+  <drag-resize id="dynamic">
+    <div id="screendim">top <button onclick="save()">save</button></div>
+  </drag-resize>
+
+</body>
+</html>
